@@ -4,18 +4,18 @@ import java.util.Date;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "badwords")
-public class BadWord {
+@Document(collection = "userRequest")
+public class UserRequest {
     @Id
     String id;
     String user;
     String word;
     Date updateDate = new Date();
 
-    public BadWord() {
+    public UserRequest() {
     }
 
-    public BadWord(String user, String word, Date updateDate) {
+    public UserRequest(String user, String word, Date updateDate) {
         this.user = user;
         this.word = word;
         this.updateDate = updateDate;
